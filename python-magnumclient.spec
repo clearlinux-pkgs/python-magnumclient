@@ -4,7 +4,7 @@
 #
 Name     : python-magnumclient
 Version  : 1.1.0
-Release  : 2
+Release  : 3
 URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-1.1.0.tar.gz
 Summary  : Client library for Magnum API

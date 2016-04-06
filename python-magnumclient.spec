@@ -4,7 +4,7 @@
 #
 Name     : python-magnumclient
 Version  : 2.0.0
-Release  : 4
+Release  : 6
 URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.0.0.tar.gz
 Summary  : Client library for Magnum API
@@ -12,45 +12,32 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-magnumclient-bin
 Requires: python-magnumclient-python
-BuildRequires : Jinja2
-BuildRequires : PyYAML-python
-BuildRequires : Sphinx-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : docutils-python
 BuildRequires : extras
 BuildRequires : extras-python
-BuildRequires : funcsigs-python
-BuildRequires : hacking-python
-BuildRequires : iso8601-python
 BuildRequires : msgpack-python-python
-BuildRequires : netifaces-python
-BuildRequires : oslo.config
+BuildRequires : os-client-config-python
 BuildRequires : oslo.serialization-python
 BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
 BuildRequires : oslotest-python
 BuildRequires : pbr
 BuildRequires : pip
+BuildRequires : pluggy
+BuildRequires : positional-python
 BuildRequires : prettytable
+BuildRequires : py-python
 BuildRequires : pyrsistent-python
+BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-keystoneclient-python
-BuildRequires : python-mimeparse-python
 BuildRequires : python-mock-python
-BuildRequires : requests-python
+BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
-BuildRequires : subunit
 BuildRequires : testrepository-python
 BuildRequires : testscenarios
 BuildRequires : testtools
 BuildRequires : testtools-python
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : wrapt-python
+BuildRequires : tox
+BuildRequires : virtualenv
+Patch1: 0001-Enable-python3-support.patch
 
 %description
 Python bindings to the Magnum API
@@ -70,12 +57,10 @@ bin components for the python-magnumclient package.
 %package python
 Summary: python components for the python-magnumclient package.
 Group: Default
+Requires: os-client-config-python
 Requires: oslo.serialization-python
 Requires: oslo.utils-python
 Requires: prettytable
-Requires: requests-python
-Requires: six-python
-Requires: stevedore
 
 %description python
 python components for the python-magnumclient package.
@@ -83,13 +68,16 @@ python components for the python-magnumclient package.
 
 %prep
 %setup -q -n python-magnumclient-2.0.0
+%patch1 -p1
 
 %build
 python2 setup.py build -b py2
+python3 setup.py build -b py3
 
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)

@@ -1,6 +1,28 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Updated from global requirements
+* Add endpoint_override parameter to python-magnumclient
+* Updated from global requirements
+* Revert "Parameter format change for ca-show and ca-sign"
+* Updated from global requirements
+* Parameter format change for ca-show and ca-sign
+* Updated from global requirements
+* Fix the container-list with --limit 'a negative number'
+* Remove the update function of container
+* Add missing user message
+* Add marker/limit/sort-key/sort-dir features for bay-list
+* Add marker/limit/sort-key/sort-dir features for container-list
+* Allow semicolons in list of labels
+* Add unit tests for MServiceManager.list() method
+* Add unit tests for ContainerManager.list() method
+* Add unit tests for BayModelManager.list() method
+* Add unit tests for BayManager.list() method
+* Adapt http response error message parsing
+
 2.0.0
 -----
 
@@ -230,10 +252,6 @@ CHANGES
 * Add help info for container operations
 * Update help message for baymodel operations
 * Add help for magnum object show
-
-m1
---
-
 * Remove 'desc' from container output
 * Rename `resource`_data/url attributes to manifest/manifest_url
 * Default version should be v1 in magnum

@@ -3,7 +3,6 @@ extras-python
 msgpack-python-python
 os-client-config-python
 oslo.serialization-python
-oslotest-python
 oslo.utils-python
 pbr
 pip
@@ -11,7 +10,6 @@ pluggy
 positional-python
 prettytable
 py-python
-pyrsistent-python
 pytest
 python3-dev
 python-dev

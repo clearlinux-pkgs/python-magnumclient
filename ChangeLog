@@ -1,6 +1,69 @@
 CHANGES
 =======
 
+2.3.0
+-----
+
+* Updated from global requirements
+* Magnum client to support sync and async bay opts
+* Add microversioning support for httpclient
+* Add floating_ip_enabled attributes to baymodel
+* Cleanup coverage configuration
+* Fixes bay_uuid parameter issue in functional tests
+* Fix to use HttpClient if token is given
+* Updates certificate CLI to use cluster
+* Updated from global requirements
+* Adds 'cluster' and 'cluster template'
+* Append value using comma if key exists in label
+* bay-config return absolute path
+* Updated from global requirements
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Enabled magnum client to display detailed information
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+* Base OSC plugin support
+* Use os-client-config in shell
+* Remove discover from test-requirements
+* Increase unit test coverage for module baymodels
+* Update the magnum client to send the latest version
+* Updated from global requirements
+* Add shell command bay-config
+* Display baymodel info with bay-show command
+
+2.2.0
+-----
+
+* Updated from global requirements
+* Bay_create_timeout should be set to 60 default
+* Prints  '-' instead of 'None' when data is None
+* Updated from global requirements
+* Pass a flag to disable LB in baymodels
+* Log appropriate error while exception
+* Add fixed_subnet attributes to baymodel
+* Updated from global requirements
+* Support OS_PROJECT_* env variables
+* Completely remove openstack common modules
+* Updated from global requirements
+* Add docker-storage-driver argument to baymodel
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Tox test should respect upper-constraints
+* Switch to a new service type "container-infra"
+* Add mesos_slave_executor_environment_variables validate in CLI
+* Add some fields back to bay_list
+* Updated from global requirements
+* Add '--fields' to show more columns for bay-list
+* Update the home-page with developer documentation
+* Correcting help messages of baymodel
+* Add python3 to python classifiers
+* Add '--fields' to show more columns for baymodel-list
+* Corrected spacing mistake in baymodels_shell.py
+* Updated from global requirements
+* Fix the bug when some value in labels has comma, it will fail
+* Remove k8s pods, rcs, svc and container API calls
+
 2.1.0
 -----
 
@@ -33,6 +96,7 @@ CHANGES
 * Completely remove openstack common modules
 * Add param for magnum baymodel-list
 * Move bandit into pep8
+* Client : Create BayModel with server type(VM/BM)
 * Updated from global requirements
 * Sync with oslo-incubator
 * Updated from global requirements

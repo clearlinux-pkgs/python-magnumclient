@@ -1,23 +1,2 @@
-extras
-extras-python
-msgpack-python-python
-os-client-config-python
-oslo.serialization-python
-oslo.utils-python
-pbr
-pip
-pluggy
-positional-python
-prettytable
-py-python
-pytest
-python3-dev
-python-dev
-python-mock-python
-setuptools
-testrepository-python
-testscenarios
-testtools
-testtools-python
-tox
-virtualenv
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.

@@ -1,6 +1,67 @@
 CHANGES
 =======
 
+2.5.0
+-----
+
+* Add usage docs for magnum client
+* Updated from global requirements
+* Increase UT Coverage
+* Add the OSC 'cluster template list' command
+* Add osc-lib to requirements.txt
+
+2.4.0
+-----
+
+* Adding stats-list command to magnum client
+* Added link for modindex
+* Increase UT Coverage
+* Fix passing TLS_VERIFIED in clusters/bays_shell
+* Increase UT Coverage
+* Integrate OSprofiler in Magnum Client
+* Remove H903 error in sources
+* Updated from global requirements
+* Fix: swarm cluster-config, bay-config with tls_disabled
+* Updated from global requirements
+* Pass 'api_version' to create HTTPClient
+* Mark help messages for Translation
+* Allow cluster-config on cluster status 'ROLLBACK_COMPLETE'
+* Add OSC command for cluster_templates list
+* Rollback cluster/bay on update failure
+* Updated from global requirements
+* Magnum cluster-config/bay-config compatible with py3
+* Updated from global requirements
+* Show team and repo badges on README
+* Remove Not used Classes/Methods from apiclient.base
+* Use assert_called_*/assert_not_called to verify mock calls
+* Fix: some typos in unit test
+* Use assert_called_*/assert_not_called to verify mock calls
+* Renames *-id parameters
+* Implement Parameter Deprecation
+* Use assert_called_*/assert_not_called to verify mock calls
+* Add a deprecation message to the bay* commands' help text
+* Updated from global requirements
+* Increase UT coverage
+* Remove invalid check for 'manifest' path
+* Updated from global requirements
+* Add .venv directory to .gitignore
+* Enable DeprecationWarning in test environments
+* Updated from global requirements
+* Add __ne__ built-in function
+* Add missing options for HTTPClient if auth_token given
+* Updated from global requirements
+* Remove white space between print and ()
+* Add --keypair-id for cluster-create
+* Replace assertTrue(a in b) with assertIn(a, b)
+* Updated from global requirements
+* Fix the generated k8s config file
+* cluster-config return absolute path
+* delete python bytecode including pyo before every test run
+* Fix a keyward arguement error on bay-config
+* Add magnum.bash_completion This can support the function of autocomplete for magnum's commands
+* Cluster creation command returns complete cluster uuid
+* Sync tools/tox_install.sh
+
 2.3.0
 -----
 
@@ -17,6 +78,7 @@ CHANGES
 * Append value using comma if key exists in label
 * bay-config return absolute path
 * Updated from global requirements
+* Use testr coverage feature
 * Use upper constraints for all jobs in tox.ini
 * Updated from global requirements
 * Enabled magnum client to display detailed information

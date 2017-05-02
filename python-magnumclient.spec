@@ -6,7 +6,7 @@
 #
 Name     : python-magnumclient
 Version  : 2.5.0
-Release  : 16
+Release  : 17
 URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.5.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.5.0.tar.gz.asc

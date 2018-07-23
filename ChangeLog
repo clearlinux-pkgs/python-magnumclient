@@ -1,6 +1,103 @@
 CHANGES
 =======
 
+2.9.1
+-----
+
+* Fix entrypoints for quotas
+
+2.9.0
+-----
+
+* OSC command for magnum quota's
+* Add deprecation warnings to magnum client commands
+* OSC command for ca-show, ca-sign, ca-roatate and stats-list
+* Now cluster-template-update works for "labels"
+* Make cluster-config rbac compatible for kubebernetes
+* Update UPPER\_CONSTRAINTS\_FILE for stable/queens
+* Update .gitreview for stable/queens
+
+2.8.0
+-----
+
+* Add disable floating ip parameter
+* Updated from global requirements
+* Cleanup test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* Set --labels default to None on cluster create
+* OSC: Add --flavor to coe cluster create
+* Add missing master\_flavor\_id in cluster attributes
+* Avoid tox\_install.sh for constraints support
+* Updated from global requirements
+* Replace six.iteritems() with .items()
+* OSC: Add --master-flavor to coe cluster create
+* Make cluster config --force a boolean
+* Updated from global requirements
+* Add --labels for cluster-create
+* OSC: Add --labels to coe cluster create
+* Add oslo.log as requirement
+* OSC: Add magnum service-list command
+* Now \`name\` is a positional argument in cluster creation
+* OSC: Remove unused files
+* inline comment typo fix
+
+2.7.0
+-----
+
+* Remove log translations
+* Updated from global requirements
+* OSC: Add cluster config command
+* OSC 4/4 Add remaining cluster commands
+* OSC 3/4 Add remaining CT commands
+* OSC 2/4 Add Cluster Create and List
+* Updated from global requirements
+* OSC 1/4 Add CT create and UT framework
+* Remove docker-volume-size from cluster-list
+* Updated from global requirements
+* Make cluster name positional in ca-show
+* remove slash from kubernetes cluster context name
+* Update the documentation link for doc migration
+* Updated from global requirements
+* Updated from global requirements
+* switch to openstackdocstheme
+* Don't set a default for docker\_volume\_size
+* Updated from global requirements
+* Make --profile load from environment variables
+* Add --docker-volume-size for cluster-create
+* Updated from global requirements
+* Change assertTrue(isinstance()) by optimal assert
+
+2.6.0
+-----
+
+* Add the support for 'detail' flag
+* Updated from global requirements
+* Replace assertRaisesRegexp with assertRaisesRegex
+* Updated from global requirements
+* Updated from global requirements
+* Magnum client suport insecure\_registry
+* Use assertIsNone(...) instead of assertEqual(None, ...)
+* Updated from global requirements
+* Updated from global requirements
+* Make --cluster option required for ca-rotate
+* Move cover.sh to the tools directory
+* Remove support for keyapir UUID
+* Fix wrong path reference
+* Update .gitignore to ignore .eggs
+* Increase Test coverage
+* The python 3.4 support is removed
+* Correct mistake from OSprofiler help
+* Fix UT for duplicate name args test case
+* Updated from global requirements
+* Add magnum client support for resource quotas
+* Update test requirement
+* Allow name as positional argument
+* Print exception details on update failure
+* Simplify magnumclient.shell.OpenStackMagnumShell.main()
+* Compare test coverage with the master branch
+* Updated from global requirements
+
 2.5.0
 -----
 
@@ -9,6 +106,7 @@ CHANGES
 * Increase UT Coverage
 * Add the OSC 'cluster template list' command
 * Add osc-lib to requirements.txt
+* Add ca-rotate command to magnumclient
 
 2.4.0
 -----
@@ -16,30 +114,30 @@ CHANGES
 * Adding stats-list command to magnum client
 * Added link for modindex
 * Increase UT Coverage
-* Fix passing TLS_VERIFIED in clusters/bays_shell
+* Fix passing TLS\_VERIFIED in clusters/bays\_shell
 * Increase UT Coverage
 * Integrate OSprofiler in Magnum Client
 * Remove H903 error in sources
 * Updated from global requirements
-* Fix: swarm cluster-config, bay-config with tls_disabled
+* Fix: swarm cluster-config, bay-config with tls\_disabled
 * Updated from global requirements
-* Pass 'api_version' to create HTTPClient
+* Pass 'api\_version' to create HTTPClient
 * Mark help messages for Translation
-* Allow cluster-config on cluster status 'ROLLBACK_COMPLETE'
-* Add OSC command for cluster_templates list
+* Allow cluster-config on cluster status 'ROLLBACK\_COMPLETE'
+* Add OSC command for cluster\_templates list
 * Rollback cluster/bay on update failure
 * Updated from global requirements
 * Magnum cluster-config/bay-config compatible with py3
 * Updated from global requirements
 * Show team and repo badges on README
 * Remove Not used Classes/Methods from apiclient.base
-* Use assert_called_*/assert_not_called to verify mock calls
+* Use assert\_called\_\*/assert\_not\_called to verify mock calls
 * Fix: some typos in unit test
-* Use assert_called_*/assert_not_called to verify mock calls
-* Renames *-id parameters
+* Use assert\_called\_\*/assert\_not\_called to verify mock calls
+* Renames \*-id parameters
 * Implement Parameter Deprecation
-* Use assert_called_*/assert_not_called to verify mock calls
-* Add a deprecation message to the bay* commands' help text
+* Use assert\_called\_\*/assert\_not\_called to verify mock calls
+* Add a deprecation message to the bay\* commands' help text
 * Updated from global requirements
 * Increase UT coverage
 * Remove invalid check for 'manifest' path
@@ -47,8 +145,8 @@ CHANGES
 * Add .venv directory to .gitignore
 * Enable DeprecationWarning in test environments
 * Updated from global requirements
-* Add __ne__ built-in function
-* Add missing options for HTTPClient if auth_token given
+* Add \_\_ne\_\_ built-in function
+* Add missing options for HTTPClient if auth\_token given
 * Updated from global requirements
 * Remove white space between print and ()
 * Add --keypair-id for cluster-create
@@ -58,9 +156,9 @@ CHANGES
 * cluster-config return absolute path
 * delete python bytecode including pyo before every test run
 * Fix a keyward arguement error on bay-config
-* Add magnum.bash_completion This can support the function of autocomplete for magnum's commands
+* Add magnum.bash\_completion This can support the function of autocomplete for magnum's commands
 * Cluster creation command returns complete cluster uuid
-* Sync tools/tox_install.sh
+* Sync tools/tox\_install.sh
 
 2.3.0
 -----
@@ -68,9 +166,9 @@ CHANGES
 * Updated from global requirements
 * Magnum client to support sync and async bay opts
 * Add microversioning support for httpclient
-* Add floating_ip_enabled attributes to baymodel
+* Add floating\_ip\_enabled attributes to baymodel
 * Cleanup coverage configuration
-* Fixes bay_uuid parameter issue in functional tests
+* Fixes bay\_uuid parameter issue in functional tests
 * Fix to use HttpClient if token is given
 * Updates certificate CLI to use cluster
 * Updated from global requirements
@@ -97,14 +195,14 @@ CHANGES
 -----
 
 * Updated from global requirements
-* Bay_create_timeout should be set to 60 default
+* Bay\_create\_timeout should be set to 60 default
 * Prints  '-' instead of 'None' when data is None
 * Updated from global requirements
 * Pass a flag to disable LB in baymodels
 * Log appropriate error while exception
-* Add fixed_subnet attributes to baymodel
+* Add fixed\_subnet attributes to baymodel
 * Updated from global requirements
-* Support OS_PROJECT_* env variables
+* Support OS\_PROJECT\_\* env variables
 * Completely remove openstack common modules
 * Updated from global requirements
 * Add docker-storage-driver argument to baymodel
@@ -113,15 +211,15 @@ CHANGES
 * Updated from global requirements
 * Tox test should respect upper-constraints
 * Switch to a new service type "container-infra"
-* Add mesos_slave_executor_environment_variables validate in CLI
-* Add some fields back to bay_list
+* Add mesos\_slave\_executor\_environment\_variables validate in CLI
+* Add some fields back to bay\_list
 * Updated from global requirements
 * Add '--fields' to show more columns for bay-list
 * Update the home-page with developer documentation
 * Correcting help messages of baymodel
 * Add python3 to python classifiers
 * Add '--fields' to show more columns for baymodel-list
-* Corrected spacing mistake in baymodels_shell.py
+* Corrected spacing mistake in baymodels\_shell.py
 * Updated from global requirements
 * Fix the bug when some value in labels has comma, it will fail
 * Remove k8s pods, rcs, svc and container API calls
@@ -130,7 +228,7 @@ CHANGES
 -----
 
 * Updated from global requirements
-* Add endpoint_override parameter to python-magnumclient
+* Add endpoint\_override parameter to python-magnumclient
 * Updated from global requirements
 * Revert "Parameter format change for ca-show and ca-sign"
 * Updated from global requirements
@@ -165,16 +263,16 @@ CHANGES
 * Remove node object from magnumclient
 * Exception not catched when bay create failed
 * Fix a spell typo
-* The rc-list should contain bay_uuid
-* Remove unused attribute "ssh_authorized_key"
+* The rc-list should contain bay\_uuid
+* Remove unused attribute "ssh\_authorized\_key"
 * Update translation setup
 * Fix incorrect help message
 * Add Keystone v3 compatibility
 * Updated from global requirements
-* Adds Container Volume Model volume_driver support
+* Adds Container Volume Model volume\_driver support
 * Python 3.4 compatibility
 * Add --insecure option
-* Fix endpoint_types
+* Fix endpoint\_types
 * Updated from global requirements
 * Replace six.iteritems(dict) with dict.items()
 * Change the endpoint env varible
@@ -185,14 +283,14 @@ CHANGES
 * Revert "Pass environment variables of proxy to tox"
 * Add debug testenv in tox
 * Remove check for bay state on ca-sign and ca-show
-* Fix bypass_url and errors with no headers
+* Fix bypass\_url and errors with no headers
 * Remove unnecessary check when create bay
-* Fix test_keys_and_vals_to_strs dict assert
+* Fix test\_keys\_and\_vals\_to\_strs dict assert
 * Add unit test for pod-create with invalid bay status
 * Prevent list pods while bay is not ready
 * Updated from global requirements
 * Python 3 deprecated the logger.warn method in favor of warning
-* Remove references to _i18n and apiclient.exceptions
+* Remove references to \_i18n and apiclient.exceptions
 * Handle list object when print a dict
 * Put py34 first in the env order of tox
 * Updated from global requirements
@@ -203,9 +301,9 @@ CHANGES
 * Updated from global requirements
 * Drop py33 support
 * use wild card for passing env variables
-* Add registry_enabled option to baymodel-create
-* Improve client master_count validation
-* Improve client node_count validation
+* Add registry\_enabled option to baymodel-create
+* Improve client master\_count validation
+* Improve client node\_count validation
 * Fix default bay create timeout
 * Remove py26 support
 * Fix POD CLI to work with Object from Bay
@@ -214,11 +312,11 @@ CHANGES
 * Fix Service CLI to work with Object from Bay
 * Handle faultstring when using SessionClient
 * fix wrong function description
-* fix exceptions.from_response() parameter
+* fix exceptions.from\_response() parameter
 * Fix the ouput of 'container-create' when it fails
 * Make bandit included in test-requirements.txt
 * Correct help message of '--name' for baymodel-create
-* Remove test_shell_args.py
+* Remove test\_shell\_args.py
 
 1.1.0
 -----
@@ -231,11 +329,11 @@ CHANGES
 * Fix RC CLI to work with Object from Bay changes
 * Update baymodel-update help doc
 * Delete python bytecode before every test run
-* Add .DS_Store to .gitignore
+* Add .DS\_Store to .gitignore
 * Updated from global requirements
 * Use keystoneauth to create a Session
-* Make image as required for do_container_create
-* Add test for container_create
+* Make image as required for do\_container\_create
+* Add test for container\_create
 * Add unversioned client constructor
 * Fix rc cli to work with bay identifier
 * Updated from global requirements
@@ -247,27 +345,27 @@ CHANGES
 ---------
 
 * Updated from global requirements
-* Pass bay_ident to k8s objects methods
+* Pass bay\_ident to k8s objects methods
 * Add an option to specify container memory size
 * Add support for 'baymodel-update' in python-client
 * Support for public baymodels
-* Rename 'insecure' baymodel attribute to 'tls_disabled'
-* Client: Pass bay_uuid to Service Read/Write API
-* Client: Pass bay_uuid to Pod Read/Write API
-* Client: Pass bay_uuid to RC Read/Write API
+* Rename 'insecure' baymodel attribute to 'tls\_disabled'
+* Client: Pass bay\_uuid to Service Read/Write API
+* Client: Pass bay\_uuid to Pod Read/Write API
+* Client: Pass bay\_uuid to RC Read/Write API
 * Add insecure flag to baymodel
 * Magnum show cmds display dictionaries with unicode u chars
 * Adding 'magnum service-list'
 * Add certificates operations
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 * Add support for python >= 3.4
 * Updated from global requirements
 * Adds Labels Support
-* Adds Container Network Model network_driver support
+* Adds Container Network Model network\_driver support
 * Update help message for coe service related command
 * Add missed space between two words
 * Updated from global requirements
-* Rename existing service-* to coe-service-*
+* Rename existing service-\* to coe-service-\*
 * Updated from global requirements
 * Remove name from test token
 * This adds proxy feature in magnum client
@@ -283,7 +381,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
-* Rename image_id to image when create a container
+* Rename image\_id to image when create a container
 * Updated from global requirements
 * Add missing dependency oslo.serialization
 * Updated from global requirements
@@ -313,7 +411,7 @@ CHANGES
 * Log the correct url in debug mode
 * Add heat timeout to bay-create for magnum client
 * Add coe attribute to BayModel creation
-* Add bay_uuid to container create
+* Add bay\_uuid to container create
 * Update README to work with release tools
 * Add support for pod name in pod-update command
 
@@ -326,20 +424,20 @@ CHANGES
 * Add bay status check when pod create
 * Rename swarm-token to discovery-url
 * Support pass command field when create a container
-* Delegate magnum url search to url_for method
-* Remove side effect in get_keystoneclient
+* Delegate magnum url search to url\_for method
+* Remove side effect in get\_keystoneclient
 * Add unittests for magnumclient.v1.client module
 * Correct mock use in TestCommandLineArgument.setUp
 * Uncap library requirements for liberty
 * Support update a replication controller
 * Support update a service
-* Add swarm_token to bay-create call
+* Add swarm\_token to bay-create call
 * Support update a pod
 * Authenticate once
 * Add error info detail for magnum cli
 * Update bandit for latest usage
 * Add tox bandit support for python-magnumclient
-* Remove unused get_projects_list method
+* Remove unused get\_projects\_list method
 * Add support for bay name in bay-update command
 * Allow bay name when replication controller is created
 * Update .gitreview for project rename
@@ -351,7 +449,7 @@ CHANGES
 * Add support of baymodel resource management with "name"
 * Add support of rc resource management with "name"
 * Add support of service resource management with "name"
-* Allow specification of ssh_authorized_key
+* Allow specification of ssh\_authorized\_key
 
 0.0.1
 -----
@@ -365,8 +463,8 @@ CHANGES
 * Display bay status column
 * tidy up language on one shell help command
 * Allow adding master flavor id to baymodel
-* Allow specification of fixed_network
-* Allow specification of docker_volume_size
+* Allow specification of fixed\_network
+* Allow specification of docker\_volume\_size
 * Support multiple args in some magnum commands
 * Remove '--id' option from magnum commands
 * Make bay-create fail when no argument passed
@@ -379,16 +477,16 @@ CHANGES
 * Update help message for baymodel operations
 * Add help for magnum object show
 * Remove 'desc' from container output
-* Rename `resource`_data/url attributes to manifest/manifest_url
+* Rename \`resource\`\_data/url attributes to manifest/manifest\_url
 * Default version should be v1 in magnum
 * Fix an error on not finding log handler
 * Add id as required for bay-show/delete
 * Revert "Fix an error on not finding log handler"
-* Change rc_data to replicationcontroller_data
+* Change rc\_data to replicationcontroller\_data
 * Fix an error on not finding log handler
 * Make replication controller client works
 * Remove 'desc' from docker creation attribute
-* Update test_update to test_pod_update for pod client test
+* Update test\_update to test\_pod\_update for pod client test
 * Add client test for k8s replication controller
 * Add client test for k8s service
 * Add client test for magnum containers
@@ -397,7 +495,7 @@ CHANGES
 * Add client test for magnum node
 * Support file path as a service manifest data
 * Adjusted CLI argument names to use dashes rather than underscores
-* Add client test for test_pods
+* Add client test for test\_pods
 * Support file path as a pod data
 * Add unit test for magnumclient/common/httpclient.py
 * Add unit test for magnumclient/common/utils.py
@@ -411,23 +509,23 @@ CHANGES
 * Do not advertise py33 compatibility
 * Set HTTP PUT Content-Length for container actions
 * Implement container actions
-* Add image_id attribute for container
+* Add image\_id attribute for container
 * Service create only need service filename
 * pod create only need pod filename
 * Implement client for service operations
-* Update parmater name for _show_pod
-* Add baymodel_id to bay_create
-* Add flavor_id property to baymodel object
+* Update parmater name for \_show\_pod
+* Add baymodel\_id to bay\_create
+* Add flavor\_id property to baymodel object
 * Implement pod client CLI
 * Make bay-create operate again as a result of baymodel
 * Make bay create work with new bay model structure
-* Type and image_id are removed from server
+* Type and image\_id are removed from server
 * Don't show links when showing bay
 * Make baymodel-list only show name and UUID
 * Make baymodel not show links
 * Implement baymodel in client
 * Add node object to the python client
-* Add image_id and node_count to bay-create
+* Add image\_id and node\_count to bay-create
 * Workflow documentation is now in infra-manual
 * Make separate Bay objects for each bay object
 * Complete implementation of bay operations

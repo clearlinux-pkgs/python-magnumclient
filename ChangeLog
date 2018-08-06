@@ -1,21 +1,20 @@
 CHANGES
 =======
 
-2.9.1
------
+2.10.0
+------
 
+* Switch to stestr
+* fix tox python3 overrides
 * Fix entrypoints for quotas
-
-2.9.0
------
-
+* Follow the new PTI for document build
+* add lower-constraints job
 * OSC command for magnum quota's
 * Add deprecation warnings to magnum client commands
+* Replace six.iteritems() with dict.items() in python-magnumclient
 * OSC command for ca-show, ca-sign, ca-roatate and stats-list
 * Now cluster-template-update works for "labels"
 * Make cluster-config rbac compatible for kubebernetes
-* Update UPPER\_CONSTRAINTS\_FILE for stable/queens
-* Update .gitreview for stable/queens
 
 2.8.0
 -----

@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC36CDCB4DF00C68C (infra-root@openstack.org)
 #
 Name     : python-magnumclient
-Version  : 2.9.1
-Release  : 18
-URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.9.1.tar.gz
-Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.9.1.tar.gz
-Source99 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.9.1.tar.gz.asc
+Version  : 2.10.0
+Release  : 19
+URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.10.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.10.0.tar.gz
+Source99 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.10.0.tar.gz.asc
 Summary  : Client library for Magnum API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -18,9 +18,11 @@ Requires: python-magnumclient-python3
 Requires: python-magnumclient-license
 Requires: python-magnumclient-python
 Requires: Babel
+Requires: Sphinx
 Requires: cryptography
 Requires: decorator
 Requires: keystoneauth1
+Requires: openstackdocstheme
 Requires: os-client-config
 Requires: osc-lib
 Requires: oslo.i18n
@@ -33,9 +35,6 @@ Requires: six
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 Team and repository tags
@@ -77,14 +76,14 @@ python3 components for the python-magnumclient package.
 
 
 %prep
-%setup -q -n python-magnumclient-2.9.1
+%setup -q -n python-magnumclient-2.10.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532381039
+export SOURCE_DATE_EPOCH=1533597556
 python3 setup.py build -b py3
 
 %install

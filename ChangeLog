@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+2.11.0
+------
+
+* Fix crash on Service catalog empty 403 response
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Add release notes for magnum client
+* [k8s] Add embed certs to config
+
 2.10.0
 ------
 
 * Switch to stestr
+* osc: Don't pass parameters with null value
 * fix tox python3 overrides
 * Fix entrypoints for quotas
 * Follow the new PTI for document build

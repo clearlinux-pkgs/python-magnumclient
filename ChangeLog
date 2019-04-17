@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+2.13.0
+------
+
+* Add nodegroup list/show commands
+* Support resize api
+* Update master for stable/stein
+* Support health\_status on client side
+* python3 fixes
+
 2.12.0
 ------
 
 * Keystone auth support
+* add python 3.7 unit test job
+* Add hidden property to cluster template
 * Fix py37 compatibility
 * Use oslo\_serialization instead of the json module directly
 * Use template for lower-constraints

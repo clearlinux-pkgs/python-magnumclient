@@ -6,7 +6,7 @@
 #
 Name     : python-magnumclient
 Version  : 2.13.0
-Release  : 25
+Release  : 26
 URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.13.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.13.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.13.0.tar.gz.asc

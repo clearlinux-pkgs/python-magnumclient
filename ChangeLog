@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+2.14.0
+------
+
+* Conditional hidden arg for backward compatibility
+* Fix coverage test
+* Blacklist bandit 1.6.0 and cap Sphinx on Python2
+* Display project\_id for cluster show
+* OpenDev Migration Patch
+* Dropping the py35 testing
+
 2.13.0
 ------
 
 * Add nodegroup list/show commands
+* Support upgrade API
 * Support resize api
 * Update master for stable/stein
 * Support health\_status on client side

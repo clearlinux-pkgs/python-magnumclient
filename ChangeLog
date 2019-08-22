@@ -1,9 +1,15 @@
 CHANGES
 =======
 
+2.15.0
+------
+
+* Support network, subnet and FIP when creating cluster
+
 2.14.0
 ------
 
+* Add Python 3 Train unit tests
 * Conditional hidden arg for backward compatibility
 * Fix coverage test
 * Blacklist bandit 1.6.0 and cap Sphinx on Python2
@@ -30,6 +36,7 @@ CHANGES
 * Fix py37 compatibility
 * Use oslo\_serialization instead of the json module directly
 * Use template for lower-constraints
+* Change openstack-dev to openstack-discuss
 * Add Python 3.6 classifier to setup.cfg
 * add python 3.6 unit test job
 * Trivial: Update pypi url to new url

@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : python-magnumclient
-Version  : 2.14.0
-Release  : 28
-URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.14.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.14.0.tar.gz
-Source1 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.14.0.tar.gz.asc
+Version  : 2.15.0
+Release  : 29
+URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.15.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.15.0.tar.gz
+Source1 : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.15.0.tar.gz.asc
 Summary  : Python client library for Magnum
 Group    : Development/Tools
 License  : Apache-2.0
@@ -90,14 +90,14 @@ python3 components for the python-magnumclient package.
 
 
 %prep
-%setup -q -n python-magnumclient-2.14.0
+%setup -q -n python-magnumclient-2.15.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565963613
+export SOURCE_DATE_EPOCH=1566485547
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "

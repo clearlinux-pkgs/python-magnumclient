@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : python-magnumclient
-Version  : 2.16.0
-Release  : 32
-URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.16.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.16.0.tar.gz
-Source1  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.16.0.tar.gz.asc
-Summary  : Client library for Magnum API
+Version  : 2.17.0
+Release  : 33
+URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.17.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.17.0.tar.gz
+Source1  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-2.17.0.tar.gz.asc
+Summary  : Python client library for Magnum
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-magnumclient-bin = %{version}-%{release}
@@ -48,8 +48,11 @@ BuildRequires : six
 BuildRequires : stevedore
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: http://governance.openstack.org/badges/python-magnumclient.svg
+:target: http://governance.openstack.org/reference/tags/index.html
 
 %package bin
 Summary: bin components for the python-magnumclient package.
@@ -81,21 +84,38 @@ python components for the python-magnumclient package.
 Summary: python3 components for the python-magnumclient package.
 Group: Default
 Requires: python3-core
+Provides: pypi(python_magnumclient)
+Requires: pypi(babel)
+Requires: pypi(cryptography)
+Requires: pypi(decorator)
+Requires: pypi(keystoneauth1)
+Requires: pypi(os_client_config)
+Requires: pypi(osc_lib)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.log)
+Requires: pypi(oslo.serialization)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(prettytable)
+Requires: pypi(requests)
+Requires: pypi(six)
+Requires: pypi(stevedore)
 
 %description python3
 python3 components for the python-magnumclient package.
 
 
 %prep
-%setup -q -n python-magnumclient-2.16.0
-cd %{_builddir}/python-magnumclient-2.16.0
+%setup -q -n python-magnumclient-2.17.0
+cd %{_builddir}/python-magnumclient-2.17.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580234783
+export SOURCE_DATE_EPOCH=1583524180
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -108,7 +128,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-magnumclient
-cp %{_builddir}/python-magnumclient-2.16.0/LICENSE %{buildroot}/usr/share/package-licenses/python-magnumclient/c700a8b9312d24bdc57570f7d6a131cf63d89016
+cp %{_builddir}/python-magnumclient-2.17.0/LICENSE %{buildroot}/usr/share/package-licenses/python-magnumclient/c700a8b9312d24bdc57570f7d6a131cf63d89016
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

@@ -6,7 +6,7 @@
 #
 Name     : python-magnumclient
 Version  : 3.2.1
-Release  : 37
+Release  : 38
 URL      : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-3.2.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-3.2.1.tar.gz
 Source1  : http://tarballs.openstack.org/python-magnumclient/python-magnumclient-3.2.1.tar.gz.asc
